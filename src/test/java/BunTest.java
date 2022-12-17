@@ -6,10 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class BunTest {
 
-Bun bun = new Bun("Name", 10);
+
 
     @Test
     public void getNameReturnInValidValue(){
+        Bun bun = new Bun("Name", 10);
         String expectedName = "Name";
         String actualName = bun.getName();
         assertEquals("Name is incorrect",expectedName,actualName);
@@ -17,13 +18,15 @@ Bun bun = new Bun("Name", 10);
 
     @Test
     public void getPriceReturnInValidValue(){
+       Bun bun = new Bun("Name", 10);
        float expectedPrise = 10;
        float actualPrise = bun.getPrice();
-        assertEquals("Price is incorrect", expectedPrise,actualPrise,2);
+       assertEquals("Price is incorrect", expectedPrise,actualPrise,2);
     }
 
     @Test
     public void getPriceReturnNotNull() {
+        Bun bun = new Bun("Name", 10);
         float actualPrise = bun.getPrice();
         MatcherAssert.assertThat(actualPrise, notNullValue());
     }
